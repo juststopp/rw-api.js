@@ -1,6 +1,6 @@
 # RW-API.JS
 
-`RW-API.JS` est un module permettant d'écouter les évents émis par notre site web.
+`RW-API.JS` est un module permettant d'écouter les évents émis par notre site web. (Votes & Bump)
 
 ## Comment le faire fonctionner
 
