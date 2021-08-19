@@ -1,6 +1,6 @@
 {
   "name": "rw-api.js",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "A npm package to listen to votes on our website.",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/juststopp/rw-api.js/issues"
   },
-  "homepage": "https://github.com/juststopp/rw-api.js#readme"
+  "homepage": "https://github.com/juststopp/rw-api.js#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {}
 }
