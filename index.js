@@ -22,4 +22,4 @@ class APIClient {
     }
 }
 
-module.exports = APIClient;
+module.exports.APIClient = APIClient;
