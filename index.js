@@ -1,7 +1,9 @@
 const express = require('express');
+const EventEmitter = require('events');
 
-module.exports = class {
+class APIClient extends EventEmitter {
     constructor(endpoint, port, password) {
+        super();
         this.server = express();
         this.endpoint = endpoint;
         this.port = port;
@@ -11,8 +13,8 @@ module.exports = class {
     async start() {
         this.server.use(express.json());
         this.server.post(this.endpoint, (req, res) => {
-            if(!req.get('Authorization')) return res.status(401);
-            if(!req.get('Authorization') == this.password) return res.status(401);
+            if(!req.get('Authorization')) return res.sendStatus(401);
+            if(!req.get('Authorization') == this.password) return res.sendStatus(401);
 
             if(req.body.event == 'vote') this.emit(req.body.event, req.body.new_votes, req.body.user);
             else this.emit(req.body.event, req.body.user);
@@ -21,3 +23,5 @@ module.exports = class {
         this.server.listen(this.port);
     }
 }
+
+module.exports.APIClient = APIClient;
