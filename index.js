@@ -1,6 +1,6 @@
 const express = require('express');
 
-class APIClient {
+module.exports = class {
     constructor(enpoint, port, password) {
         this.server = express();
         this.enpoint = enpoint;
@@ -21,5 +21,3 @@ class APIClient {
         this.server.listen(this.port);
     }
 }
-
-module.exports.APIClient = APIClient;
