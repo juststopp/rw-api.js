@@ -1,0 +1,22 @@
+{
+  "name": "rw-api.js",
+  "version": "1.0.4",
+  "description": "A npm package to listen to votes on our website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JustStop__",
+  "license": "ISC",
+  "keywords": [
+    "API"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juststopp/rw-api.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juststopp/rw-api.js/issues"
+  },
+  "homepage": "https://github.com/juststopp/rw-api.js#readme"
+}
