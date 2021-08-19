@@ -19,9 +19,11 @@ Une fois tout ceci fait, enregistrez et passez à l'étape suivante.
 Une fois l'étape de configuration faite, vous allez désormais devoir, dans le code de votre robot, ajouté un bout de code pour que l'API fonctione. Voici le code en question:
 
 ```js
-const { APICLient } = require('rw-api.js');
+const APICLient = require('rw-api.js').APIClient;
 const RWClient = new APIClient(endpoint, port, password); // L'endpoint, le port, et le password doivent être les mêmes que ceux configurés sur le site. 
                                                           // Pour l'endpoint, mettez simplement ce qui se trouve après le / EXEMPLE: L'endpoint sur le site est 123.12.123.12:8080/rwapi, mettez simplement /rwapi.
+
+RWClient.start();
 RWClient.on('vote', async (new_votes, user) => {
     /* Vous mettez ici ce que vous voulez.
      * new_votes est le nombre de votes que le serveur à après le vote de l'utilisateur et user est un objet User basique de discord.js;
@@ -31,5 +33,4 @@ RWClient.on('vote', async (new_votes, user) => {
     const channel = this.client.channels.cache.get('123456789');
     channel.send(`Merci à ${user.username}#${user.discriminator} qui vient de voter pour le serveur ! Nous sommes désormais à ${new_vote} votes.`)
 })
-RWClient.start();
 ```
