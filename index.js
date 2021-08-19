@@ -1,9 +1,9 @@
 const express = require('express');
 
 module.exports = class {
-    constructor(enpoint, port, password) {
+    constructor(endpoint, port, password) {
         this.server = express();
-        this.enpoint = enpoint;
+        this.endpoint = endpoint;
         this.port = port;
         this.password = password;
     }

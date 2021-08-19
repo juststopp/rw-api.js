@@ -1,6 +1,6 @@
 {
   "name": "rw-api.js",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "A npm package to listen to votes on our website.",
   "main": "index.js",
   "scripts": {
